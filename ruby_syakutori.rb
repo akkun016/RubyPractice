@@ -1,43 +1,30 @@
 nums = gets.chomp.split(" ").map(&:to_i)
 n, k = nums[0], nums[1]
-ary = gets.chomp.split(" ").map(&:to_i)
+array = gets.chomp.split(" ").map(&:to_i)
 
-ans = 0
-if k == 1
-    if ary.include?(1)
-        ans = 1
-    end
-elsif k == 2
-    if ary.include?(2)
-        ans = 1
+count = 0
+mult = 1
+l = 0
+if k == 1 || k == 2
+    if array.include?(k)
+        count = 1
+    else
+        count = 0
     end
 else
-    pro = 1
-    l = 0
-    for r in 0..(n - 1) do
-        if r >= l
-            while ary[l] != 2 && l <= (n - 1) do
-                l += 1
-            end
-            
-            if ary[r] == 0
-                l = r + 1
-                pro = 1
-                while ary[l] != 2 && l <= (n - 1) do
-                    l += 1
-                end
-            else
-                pro *= ary[r]
-                if pro >= k
-                    if ans > (r - l) + 1 || ans == 0
-                        ans = (r - l) + 1
-                    end
+    for i in 0..(n - 1)
+        if array[i] != 0 && array[l] == 2
+            mult *= array[i]
+            if mult >= k
+                if count > i - l + 1|| count == 0
+                    count = i - l + 1
                 end
             end
         else
-            next
+            mult = 1
+            l = i + 1
         end
     end
 end
 
-p ans
+p count
