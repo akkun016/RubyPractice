@@ -1,3 +1,4 @@
+# 左右に動くキャラクターがブロック上から落ちないように、BFSにてプログラム
 def unagi_move(block, moves)
   result = []
   open = [0]

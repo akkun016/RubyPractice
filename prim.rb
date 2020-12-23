@@ -1,3 +1,4 @@
+# プリム法に関するコード
 def dijkstra(maze, st_h, st_w, g_h, g_w)
   cost = 0
   @open = [[st_h, st_w, cost]]

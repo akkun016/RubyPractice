@@ -1,3 +1,4 @@
+# 優先キューについて
 class PriorityQueue
   def initialize(array = [])
     @data = []

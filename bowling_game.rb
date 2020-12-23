@@ -1,3 +1,4 @@
+# ボウリングの得点に関するコード
 def strike(scores, r, fl, pn)
   if r != (fl - 1)
       if scores[r + 1][0] == pn && r != fl - 2
