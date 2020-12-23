@@ -1,3 +1,4 @@
+# フィボナッチ数列の計算に関するメモ化について
 def f_memo(n)
   return n if n <= 1
   @cache ||= []
