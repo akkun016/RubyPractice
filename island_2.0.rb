@@ -1,3 +1,5 @@
+# 盤面の島の数をカウントするコード
+# 改良版
 def island(array)
     @open = []
     count = 0
