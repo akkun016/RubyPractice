@@ -1,3 +1,5 @@
+# 範囲の中の積(n)がkより大きくなる時の最小の範囲
+
 nums = gets.chomp.split(" ").map(&:to_i)
 n, k = nums[0], nums[1]
 ary = gets.chomp.split(" ").map(&:to_i)
